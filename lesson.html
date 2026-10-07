@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson | LearnHub</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lesson.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Learn<span>Hub</span>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#subjects">Subjects</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Lesson Header -->
+    <section class="lesson-header">
+
+        <div>
+
+            <p id="lessonSubject">
+                SUBJECT
+            </p>
+
+            <h1 id="lessonTitle">
+                Topic
+            </h1>
+
+            <p>
+                Learn the topic, study the examples,
+                then test your understanding.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Lesson Navigation -->
+    <div class="lesson-navigation">
+
+        <a href="#lesson">📖 Lesson</a>
+
+        <a href="#examples">💡 Examples</a>
+
+        <a href="#classwork">✏️ Classwork</a>
+
+        <a href="#exercises">🧠 Exercises</a>
+
+    </div>
+
+
+    <!-- Main Content -->
+    <main class="lesson-container">
+
+
+        <!-- Lesson -->
+        <section id="lesson" class="lesson-card">
+
+            <span class="lesson-label">
+                LESSON
+            </span>
+
+            <h2>Introduction</h2>
+
+            <p id="lessonIntroduction">
+                Welcome to this lesson.
+            </p>
+
+            <h2>What You Will Learn</h2>
+
+            <ul id="learningObjectives">
+
+            </ul>
+
+        </section>
+
+
+        <!-- Explanation -->
+        <section class="lesson-card">
+
+            <span class="lesson-label">
+                EXPLANATION
+            </span>
+
+            <h2>Understanding the Topic</h2>
+
+            <div id="lessonExplanation">
+
+            </div>
+
+        </section>
+
+
+        <!-- Examples -->
+        <section id="examples" class="lesson-card">
+
+            <span class="lesson-label">
+                WORKED EXAMPLES
+            </span>
+
+            <h2>Examples</h2>
+
+            <div id="workedExamples">
+
+            </div>
+
+        </section>
+
+
+        <!-- Classwork -->
+        <section id="classwork" class="lesson-card">
+
+            <span class="lesson-label">
+                CLASSWORK
+            </span>
+
+            <h2>Try These Questions</h2>
+
+            <div id="classworkQuestions">
+
+            </div>
+
+        </section>
+
+
+        <!-- Exercises -->
+        <section id="exercises" class="lesson-card">
+
+            <span class="lesson-label">
+                EXERCISES
+            </span>
+
+            <h2>Test Yourself</h2>
+
+            <div id="exerciseQuestions">
+
+            </div>
+
+            <button
+                class="check-button"
+                onclick="showAnswers()">
+                Show Answers
+            </button>
+
+            <div
+                id="answers"
+                class="answers">
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <div class="logo">
+            Learn<span>Hub</span>
+        </div>
+
+        <p>
+            Learn. Practice. Understand. Succeed.
+        </p>
+
+    </footer>
+
+
+    <script src="lesson.js"></script>
+
+</body>
+
+</html>

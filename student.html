@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="student.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="stylesheet" href="student.js">
+    <link rel="stylesheet" href="lesson.js">
+    <link rel="stylesheet" href="lesson.html">
+    <link rel="stylesheet" href="subject.php">
+    <link rel="stylesheet" href="index.php">
+    <link rel="stylesheet" href="config.php">
+    <link rel="stylesheet" href="database.sql">
+    <link rel="stylesheet" href="check-answers.php">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="student.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Student Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Learn<span>Hub</span></div>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#subjects">Subjects</a>
+                <a href="#about">About</a>
+            </div>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="welcome">WELCOME TO LEARNHUB</p>
+
+            <h1>
+                Learn Better.<br>
+                Understand More.
+            </h1>
+
+            <p>
+                Learn English, Mathematics, Chemistry, Physics and Biology
+                through simple lessons, classwork and practice exercises.
+            </p>
+
+            <a href="#subjects" class="btn">Start Learning</a>
+        </div>
+    </section>
+
+    <!-- Search -->
+    <section class="search-section">
+        <h2>What do you want to learn?</h2>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for a subject or topic..."
+                onkeyup="searchTopics()"
+            >
+            <button onclick="searchTopics()">Search</button>
+        </div>
+
+        <div id="searchResults"></div>
+    </section>
+
+    <!-- Subjects -->
+    <section class="subjects" id="subjects">
+
+        <div class="section-title">
+            <p>EXPLORE</p>
+            <h2>Choose a Subject</h2>
+            <span>Learn at your own pace with simple explanations and practice.</span>
+        </div>
+
+        <div class="subject-grid">
+
+            <!-- English -->
+            <div class="subject-card english">
+                <div class="subject-icon">📘</div>
+                <h3>English</h3>
+                <p>
+                    Grammar, vocabulary, comprehension, writing,
+                    literature and communication skills.
+                </p>
+                <button onclick="showTopics('English')">
+                    Explore English →
+                </button>
+            </div>
+
+            <!-- Mathematics -->
+            <div class="subject-card mathematics">
+                <div class="subject-icon">📐</div>
+                <h3>Mathematics</h3>
+                <p>
+                    Algebra, geometry, trigonometry, statistics,
+                    calculus and problem solving.
+                </p>
+                <button onclick="showTopics('Mathematics')">
+                    Explore Mathematics →
+                </button>
+            </div>
+
+            <!-- Chemistry -->
+            <div class="subject-card chemistry">
+                <div class="subject-icon">⚗️</div>
+                <h3>Chemistry</h3>
+                <p>
+                    Atoms, bonding, reactions, organic chemistry,
+                    calculations and laboratory concepts.
+                </p>
+                <button onclick="showTopics('Chemistry')">
+                    Explore Chemistry →
+                </button>
+            </div>
+
+            <!-- Physics -->
+            <div class="subject-card physics">
+                <div class="subject-icon">⚡</div>
+                <h3>Physics</h3>
+                <p>
+                    Mechanics, electricity, waves, heat, motion,
+                    energy and modern physics.
+                </p>
+                <button onclick="showTopics('Physics')">
+                    Explore Physics →
+                </button>
+            </div>
+
+            <!-- Biology -->
+            <div class="subject-card biology">
+                <div class="subject-icon">🧬</div>
+                <h3>Biology</h3>
+                <p>
+                    Cells, genetics, ecology, evolution, human biology
+                    and living organisms.
+                </p>
+                <button onclick="showTopics('Biology')">
+                    Explore Biology →
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Topic Display -->
+    <section class="topics-section" id="topicSection">
+
+        <div class="section-title">
+            <p>LEARNING PATH</p>
+            <h2 id="topicTitle">Select a Subject</h2>
+        </div>
+
+        <div id="topicContainer" class="topic-grid">
+            <p class="placeholder">
+                Select a subject above to see its topics.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Learning Features -->
+    <section class="features">
+
+        <div class="section-title">
+            <p>WHY LEARNHUB?</p>
+            <h2>Everything You Need to Learn</h2>
+        </div>
+
+        <div class="feature-grid">
+
+            <div class="feature">
+                <div>📖</div>
+                <h3>Simple Lessons</h3>
+                <p>
+                    Topics are explained in a simple and understandable way.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div>✏️</div>
+                <h3>Classwork</h3>
+                <p>
+                    Practice what you have learned with classwork questions.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div>🧠</div>
+                <h3>Exercises</h3>
+                <p>
+                    Test yourself with additional exercises and questions.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div>💡</div>
+                <h3>Solutions</h3>
+                <p>
+                    Understand how problems are solved with worked solutions.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div>
+            <p>ABOUT LEARNHUB</p>
+            <h2>Learning Made Easier</h2>
+
+            <p>
+                LearnHub is designed to help students understand difficult
+                subjects through clear explanations, examples, classwork
+                and exercises.
+            </p>
+
+            <p>
+                Our goal is simple: make learning easier, more interactive
+                and accessible to every student.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo">Learn<span>Hub</span></div>
+
+        <p>
+            Learn. Practice. Understand. Succeed.
+        </p>
+
+        <p class="copyright">
+            © 2026 LearnHub. All Rights Reserved.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
